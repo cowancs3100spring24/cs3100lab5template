@@ -11,8 +11,7 @@ Feature: Source files must be present, compilable and output correct information
 	Scenario: No errors found
 		Given I run `dining 5 3`
 		And OUTPUT is printed
-		Then the output should not match /\(.*)\):[1-9].*$/
-		And stdout should contain "Total error count:0"
+		And the output should match /^Total error count:0\s*$/
 		And 40 points are awarded
 
 	Scenario: Ranges < 5%
