@@ -15,7 +15,7 @@ Feature: Source files must be present, compilable and output correct information
 		And 40 points are awarded
 
 	Scenario: Ranges < 5%
-		Given I run `dining 7 3`
+		Given I run `dining 3 3`
 		And OUTPUT is printed
 		Then the output should match /Percent Dining Count Range:[0-4]\./
 		And 20 points are awarded
